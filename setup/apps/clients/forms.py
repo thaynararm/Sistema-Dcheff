@@ -19,11 +19,20 @@ class ClientsForms(forms.ModelForm):
 
         #Define como cada campo deve ser exibido
         widgets = {
-            'company_name': forms.TextInput(attrs={'placeholder': 'Digite o nome da empresa'}),
-            'responsible_name': forms.TextInput(attrs={'placeholder': 'Digite o nome do responsável pela empresa'}),
-            'cnpj_cpf': forms.TextInput(attrs={'placeholder': 'Digite o CNPJ da empresa ou CPF do responsável'}),
-            'contact': forms.TextInput(attrs={'placeholder': '(xx) xxxxx-xxxx'}),
-            'city': forms.Select(attrs={'class': 'custom-css-class'}),
+            'company_name': forms.TextInput(attrs={
+                'placeholder': 'Digite o nome da empresa',
+                'class': 'form-items'}),
+            'responsible_name': forms.TextInput(attrs={
+                'placeholder': 'Digite o nome do responsável pela empresa',
+                 'class': 'form-items'}),
+            'cnpj_cpf': forms.TextInput(attrs={
+                'placeholder': 'Digite o CNPJ da empresa ou CPF do responsável',
+                'class': 'form-items'}),
+            'contact': forms.TextInput(attrs={
+                'placeholder': '(xx) xxxxx-xxxx',
+                'class': 'form-items'}),
+            'city': forms.Select(attrs={
+                'class': 'form-items'}),
         }
 
         

@@ -1,0 +1,15 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="{% static '/styles/style.css' %}">
+</head>
+<body>
+    <h1 class="header">Página Inicial</h1>
+    <section>
+        <a href="{% url 'clients' %}">Adicionar Cliente</a>
+    </section>
+</body>
+</html>
