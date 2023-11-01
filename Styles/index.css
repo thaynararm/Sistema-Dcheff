@@ -1,0 +1,99 @@
+:root{
+    --background1: #FFFFFF;
+    --background2: #F3F3F3;
+    --header-color: #828282;
+    --size-icons: 1.625rem;
+    --menu-font: 'Istok Web', sans-serif;
+    --menu-color: #7C7C7C;
+    --backgroud-color-menu: rgba(72, 72, 72, 0.1);
+    --background-color-menu-li: rgba(72, 72, 72, 0.05);
+    --backgroud-color-menu-hover: rgba(72, 72, 72, 0.1);
+}
+
+body{
+    background: linear-gradient(to bottom, var(--background1), var(--background2));
+    background-attachment: fixed;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem;
+}
+
+header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--header-color)
+}
+
+header h1{
+    font-size: 1.625rem;
+    font-family: 'Mallanna', sans-serif;
+}
+
+header h2{
+    font-size: 0.938rem;
+    font-family: 'Jaldi', sans-serif;
+    text-shadow: 0.125rem 0.125rem 0.625rem rgba(130 130 130);
+    margin-right: 1.188rem;
+}
+
+header img{
+    width: var(--size-icons);
+    height: var(--size-icons);
+    margin-right: 1.438rem;
+    transition: 0.3s;
+    background-color: transparent;
+}
+
+header img:hover{
+    box-shadow: 0rem 0rem 2rem var(--menu-color);
+    background-color: var(--backgroud-color-menu);
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    margin-left: 0.313rem;
+}
+
+.main-div-menu1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--backgroud-color-menu);
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    margin-bottom: 0.563rem;
+    font-family: var(--menu-font);
+    font-size: 1.063rem;
+    color: var(--menu-color);
+    padding-right: 13rem;
+}
+
+main ul{
+    margin-left: 2.25rem;
+    font-family: var(--menu-font);
+    font-size: 0.938rem;
+    color: var(--header-color);
+}
+
+main li{
+    margin-bottom: 0.563rem;
+    background-color: var(--background-color-menu-li);
+    padding: 0.5rem 0rem 0.5rem 0.5rem;
+}
+
+main li:hover{
+    background-color: var(--backgroud-color-menu-hover);
+}
+
+main img{
+    width: var(--size-icons);
+    height: var(--size-icons);
+    margin-right: 0.5rem;
+    margin-left: 0.375rem;
+}
