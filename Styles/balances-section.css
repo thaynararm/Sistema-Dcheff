@@ -1,17 +1,4 @@
-:root{
-    --background-count-button: rgba(72, 72, 72, 0.1);
-    --margin-count-button: #484848;
-    --font-count-button: 'Fira Sans Condensed', sans-serif;
-    --font-balances: 'Istok Web', sans-serif;
-    --font-buttons:'Jaldi', sans-serif
-
-}
-
-.section-general{
-    flex-basis: 100%;
-    margin-left: 2.5rem;
-}
-
+/* estilizações do botão para escolher a conta */
 
 .section-count-button{
     display: flex;
@@ -19,72 +6,88 @@
 }
 
 .section-count-button p{
-    font-family: var(--font-count-button);
+    font-family: var(--font-fira-sans-condensed);
     font-size: 0.688rem;
-    background-color: var(--background-count-button);
-    border: 0.063rem solid var(--margin-count-button);
+    background-color: var(--selected-background);
+    border: 0.063rem solid var(--menu-color);
     border-radius: 0.25rem;
     padding: 0.563rem 0.563rem 0.563rem 0.563rem;
+    color: var(--menu-color);
 }
 
 .section-count-button img{
-    width: 0.625rem;
-    height: 0.625rem;
+    width: var(--arrow-size-icons);
+    height: var(--arrow-size-icons);
     padding-left: 2rem;
 }
 
-.section-whole-block{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
 
-.section-block-values{
-    min-width: 85%;
-}
+/* estilizações da parte que mostra os saldos */
 
-.section-balances{
+.balance-block{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.section-values-balances{
+.balance-block div{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 1.6rem;
+    margin-right: 2rem;
 }
 
-.section-values-balances li{
+.balance-block li{
     align-items: flex-end;
 }
 
-.section-values-balances li{
+.balance-block li{
     display: flex;
     flex-direction: row;
 }
 
-.section-values-balances li:hover{
-    background-color: transparent;
-}
-
-.section-values-balances-text{
-    font-family: var(--font-balances);
+.balance-block-text-balance{
+    font-family: var(--font-istok);
     font-size: 0.813rem;
     padding-bottom: 1rem;
+    color: var(--blue)
 }
 
-.section-values-balances-number{
-    font-family: var(--font-count-button);
+.balance-block-text-revenue{
+    font-family: var(--font-istok);
+    font-size: 0.813rem;
+    padding-bottom: 1rem;
+    color: var(--green)
+}
+
+.balance-block-text-expense{
+    font-family: var(--font-istok);
+    font-size: 0.813rem;
+    padding-bottom: 1rem;
+    color: var(--red)
+}
+
+.balance-block-text-projected{
+    font-family: var(--font-istok);
+    font-size: 0.813rem;
+    padding-bottom: 1rem;
+    color: var(--menu-color)
+}
+
+.balance-block-number{
+    font-family: var(--font-fira-sans-condensed);
     font-size: 1.5rem;
     padding-bottom: 1rem;
+    margin-left: 0.5rem;
 }
 
-.section-values-balances-real{
-    font-family: var(--font-count-button);
+.balance-block-real{
+    font-family: var(--font-fira-sans-condensed);
     font-size: 1.25rem;
     padding-bottom: 1rem;
 }
+
+/* estilizações dos botões de adicionar receitas, despesas e transferências */
 
 .plus-buttons{
     display: flex;
@@ -93,8 +96,30 @@
     ;
 } 
 
-.plus-buttons button{
+.plus-buttons a{
+    text-decoration: none;
     padding: 0.5rem;
-    font-family: var(--font-buttons);
+    font-family: var(--font-jaldi);
     font-size: 0.75rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    margin-bottom: 0.375rem;
+}
+
+.plus-buttons-revenue{
+    background-color: var(--transparent-green);
+    color: var(--green);
+    border: 0.063rem solid var(--green);
+}
+
+.plus-buttons-expense{
+    background-color: var(--transparent-red);
+    color: var(--red);
+    border: 0.063rem solid var(--red);
+}
+
+.plus-buttons-transfer{
+    background-color: var(--transparent-blue);
+    color: var(--blue);
+    border: 0.063rem solid var(--blue);
 }

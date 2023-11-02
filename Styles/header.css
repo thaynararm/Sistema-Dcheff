@@ -1,3 +1,5 @@
+/* estilizações do cabeçalho */
+
 header{
     display: flex;
     justify-content: space-between;
@@ -25,8 +27,8 @@ header h2{
 }
 
 header img{
-    width: var(--size-icons);
-    height: var(--size-icons);
+    width: var(--large-size-icons);
+    height: var(--large-size-icons);
     margin-right: 1.438rem;
     transition: 0.3s;
     background-color: transparent;
@@ -35,5 +37,5 @@ header img{
 
 header img:hover{
     box-shadow: 0rem 0rem 2rem var(--menu-color);
-    background-color: var(--backgroud-color-menu);
+    background-color: var(--selected-background);
 }

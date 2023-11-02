@@ -1,13 +1,35 @@
+/* estilizações em comum do index e variáveis*/
+
 :root{
+    /* fontes */
+    --font-istok: 'Istok Web', sans-serif;
+    --font-jaldi:'Jaldi', sans-serif;
+    --font-fira-sans-condensed: 'Fira Sans Condensed', sans-serif;
+
+    /* cores */
+
+        /* de fundo */
     --background1: #FFFFFF;
     --background2: #F3F3F3;
+
+        /* primárias e secundárias */
     --header-color: #828282;
-    --size-icons: 1.625rem;
-    --menu-font: 'Istok Web', sans-serif;
     --menu-color: #7C7C7C;
-    --backgroud-color-menu: rgba(72, 72, 72, 0.1);
-    --background-color-menu-li: rgba(72, 72, 72, 0.05);
-    --backgroud-color-menu-hover: rgba(72, 72, 72, 0.1);
+    --background-not-selected: rgba(72, 72, 72, 0.05);
+    --selected-background: rgba(72, 72, 72, 0.1);
+
+        /* detalhes */
+    --blue: #005BAE;
+    --green: #17891B;
+    --red: #A10000;
+
+    --transparent-blue: rgba(0, 91, 174, 0.1);
+    --transparent-green: rgba(23, 137, 27, 0.1);
+    --transparent-red: rgba(161, 0, 0, 0.1);
+
+    /* tamanhos */
+    --large-size-icons: 1.625rem;
+    --arrow-icon-size: 0.625rem;
 }
 
 body{
@@ -19,4 +41,19 @@ main{
     display: flex;
     padding-top: 2rem;
     margin-left: 0.313rem;
+}
+
+.general-right-section{
+    flex-basis: 100%;
+    margin-left: 2.5rem;
+}
+
+.financial-information{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.button-and-balances{
+    min-width: 86%;
 }
