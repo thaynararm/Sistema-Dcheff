@@ -6,26 +6,27 @@ body{
 }
 
 main{
-    display: flex;
-    padding-top: 2rem;
+    margin-top: 2rem;
     margin-left: 0.313rem;
 }
 
+.general{
+    display: flex;
+}
+
 .section-menu{
-    min-width: auto;
+    width: 20%;
 }
 
 .section-finance{
-    min-width: 80%;
+    flex: 1;
     margin-left: 2.5rem;
 }
 
 .financial-information{
     display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 
 .button-and-balances{
-    min-width: 86.5%;
+    min-width: 80%
 }
