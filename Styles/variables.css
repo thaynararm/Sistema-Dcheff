@@ -1,0 +1,52 @@
+:root{
+    /* fontes */
+
+        --font-istok: 'Istok Web', sans-serif;
+        --font-jaldi:'Jaldi', sans-serif;
+        --font-fira-sans-condensed: 'Fira Sans Condensed', sans-serif;
+        --font-mallanna: 'Mallanna', sans-serif;
+
+    /* cores */
+
+        /* de fundo */
+        --background1: #FFFFFF;
+        --background2: #F3F3F3;
+
+        /* primárias e secundárias */
+        --header-color: #828282;
+        --menu-color: #7C7C7C;
+        --background-not-selected: rgba(72, 72, 72, 0.05);
+        --selected-background: rgba(72, 72, 72, 0.1);
+
+        /* detalhes */
+        --blue: #005BAE;
+        --green: #17891B;
+        --red: #A10000;
+        --black: #000;
+
+        --transparent-blue-10: rgba(0, 91, 174, 0.1);
+        --transparent-green-10: rgba(23, 137, 27, 0.1);
+        --transparent-red-10: rgba(161, 0, 0, 0.1);
+
+        --transparent-blue-30: rgba(0, 91, 174, 0.3);
+        --transparent-green-30: rgba(23, 137, 27, 0.3);
+        --transparent-red-30: rgba(161, 0, 0, 0.3);
+
+    /* tamanhos */
+
+        /* de textos */
+        --options-menu: 0.625rem; /* opções do menu de cada subseção */
+        --hello-and-menu-name: 0.938rem; /* subsessões dos menus e "olá" do cabeçalho */
+        --brand-name: 1.625rem; /* nome FinApprise */
+        --title-menu: 1.265rem; /* nome do menu e título das contas financeiras */
+        --account-selection: 0.688rem; /* texto da conta escolhida */
+        --balances-title: 0.813rem; /* textos dos saldos e das contas financeiras */
+        --value: 1.5rem; /* valor em dinheiro dos saldos */
+        --real: 1.25rem; /* texto do R$ do saldo */
+        --text-buttons-plus: 0.75rem; /* texto dos botões de adicionar receitas, despesas e transferências */
+
+
+        /* de imagens */
+        --icons-header: 1.625rem; /* ícones do cabeçalho e do menu */
+        --icons-accounts: 3.5rem; /* ícnes das contas financeiras */
+}

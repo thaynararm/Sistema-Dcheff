@@ -15,20 +15,20 @@ header div{
 }
 
 header h1{
-    font-size: 1.625rem;
-    font-family: 'Mallanna', sans-serif;
+    font-size: var(--brand-name);
+    font-family: var(--font-mallanna);
 }
 
 header h2{
-    font-size: 0.938rem;
-    font-family: 'Jaldi', sans-serif;
-    text-shadow: 0.125rem 0.125rem 0.625rem rgba(130 130 130);
+    font-size: var(--hello-and-menu-name);
+    font-family: var(--font-jaldi);
+    text-shadow: 0.125rem 0.125rem 0.625rem var(--header-color);
     margin-right: 1.188rem;
 }
 
 header img{
-    width: var(--large-size-icons);
-    height: var(--large-size-icons);
+    width: var(--icons-header);
+    height: var(--icons-header);
     margin-right: 1.438rem;
     transition: 0.3s;
     background-color: transparent;
