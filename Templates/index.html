@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../Styles/reset.css">
     <link rel="stylesheet" type="text/css" href="../Styles/index.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/header.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/menu.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/balances-section.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Istok+Web&family=Jaldi&family=Mallanna&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web&family=Jaldi&family=Mallanna&family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
     <title>FinApprise</title>
 </head>
 <body>
@@ -22,23 +25,91 @@
         </div>
     </header>
     <main>
-        <section>
+        <section> <!-- menu -->
             <div class="main-div-menu1">
                 <img src="../Images/Main/Menu.png" alt="Imagem de menu com três listras">
                 <h1>MENU</h1>
             </div>
             <div>
-                <ul>
-                    <li><h2>Visão Geral</h2></li>
-                    <li><h2>Financeiro</h2></li>
-                    <li><h2>Estoque</h2></li>
-                    <li><h2>Clientes e Fornecedores</h2></li>
-                    <li><h2>Relatórios</h2></li>
+                <ul class="menu">
+                    <li class="menu"><h2>Visão Geral</h2></li>
+                    <ul class="options">
+                        <li class="options"><p>Página Inicial</p></li>
+                    </ul>
+                    <li class="menu"><h2>Financeiro</h2></li>
+                    <ul class="options">
+                        <li class="options"><p>Extrato de Movimentações</p></li>
+                        <li class="options"><p>Contas Financeiras</p></li>
+                        <li class="options"><p>Visão de Despesas</p></li>
+                        <li class="options"><p>Visão de Receitas</p></li>
+                    </ul>
+                    <li class="menu"><h2>Estoque</h2></li>
+                    <ul class="options">
+                        <li class="options"><p>Cadastro de Produto</p></li>
+                        <li class="options"><p>Registro de Entradas</p></li>
+                        <li class="options"><p>Registro de Saídas</p></li>
+                        <li class="options"><p>Registro de Trocas</p></li>
+                        <li class="options"><p>Movimentações</p></li>
+                    </ul>
+                    <li class="menu"><h2>Clientes e Fornecedores</h2></li>
+                    <ul class="options">
+                        <li class="options"><p>Cadastro de Clientes</p></li>
+                        <li class="options"><p>Registro de Fornecedores</p></li>
+                        <li class="options"><p>Visão de Clientes</p></li>
+                        <li class="options"><p>Visão de Fornecedores</p></li>
+                    </ul>
+                    <li class="menu"><h2>Relatórios</h2></li>
+                    <ul class="options">
+                        <li class="options"><p>DRE</p></li>
+                        <li class="options"><p>Fluxo de Caixa</p></li>
+                    </ul>
                 </ul>
             </div>
-        </section>
-        <section>
-            <p>Outro lado</p>
+        </section> 
+        <section class="section-general"> <!-- financeiro -->  
+            <section class="section-whole-block">
+                <div class="section-block-values"> 
+                    <div class="section-count-button"> <!-- botão da conta escolhida -->
+                        <p>Conta Pessoal Edinaldo Martins
+                        <img src="../Images/Main/Sort-Down.png" ></p>
+                    </div> 
+                    <div class="section-balances"> <!--saldos -->
+                        <div class="section-values-balances">
+                            <ul>
+                                <li><p class="section-values-balances-text">Saldo Atual</p></li>
+                                <li><p class="section-values-balances-real">R$</p>
+                                <p class="section-values-balances-number">0,00</p></li>
+                            </ul>
+                        </div>
+                        <div class="section-values-balances">
+                            <ul>
+                                <li><p class="section-values-balances-text">Receita Mensal</p></li>
+                                <li><p class="section-values-balances-real">R$</p>
+                                <p class="section-values-balances-number">0,00</p></li>
+                            </ul>
+                        </div>
+                        <div class="section-values-balances">
+                            <ul>
+                                <li><p class="section-values-balances-text">Despesa Mensal</p></li>
+                                <li><p class="section-values-balances-real">R$</p>
+                                <p class="section-values-balances-number">0,00</p></li>
+                            </ul>
+                        </div>
+                        <div class="section-values-balances">
+                            <ul>
+                                <li><p class="section-values-balances-text">Saldo Projetado</p></li>
+                                <li><p class="section-values-balances-real">R$</p>
+                                <p class="section-values-balances-number">0,00</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="plus-buttons"> <!-- botões de adição -->
+                    <button>Nova Receita</button>
+                    <button>Nova Despesa</button>
+                    <button>Nova Transferência</button>
+                </div>
+            </section>
         </section>
     </main>
 </body>

@@ -1,0 +1,100 @@
+:root{
+    --background-count-button: rgba(72, 72, 72, 0.1);
+    --margin-count-button: #484848;
+    --font-count-button: 'Fira Sans Condensed', sans-serif;
+    --font-balances: 'Istok Web', sans-serif;
+    --font-buttons:'Jaldi', sans-serif
+
+}
+
+.section-general{
+    flex-basis: 100%;
+    margin-left: 2.5rem;
+}
+
+
+.section-count-button{
+    display: flex;
+    align-items: center; 
+}
+
+.section-count-button p{
+    font-family: var(--font-count-button);
+    font-size: 0.688rem;
+    background-color: var(--background-count-button);
+    border: 0.063rem solid var(--margin-count-button);
+    border-radius: 0.25rem;
+    padding: 0.563rem 0.563rem 0.563rem 0.563rem;
+}
+
+.section-count-button img{
+    width: 0.625rem;
+    height: 0.625rem;
+    padding-left: 2rem;
+}
+
+.section-whole-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.section-block-values{
+    min-width: 85%;
+}
+
+.section-balances{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section-values-balances{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+}
+
+.section-values-balances li{
+    align-items: flex-end;
+}
+
+.section-values-balances li{
+    display: flex;
+    flex-direction: row;
+}
+
+.section-values-balances li:hover{
+    background-color: transparent;
+}
+
+.section-values-balances-text{
+    font-family: var(--font-balances);
+    font-size: 0.813rem;
+    padding-bottom: 1rem;
+}
+
+.section-values-balances-number{
+    font-family: var(--font-count-button);
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.section-values-balances-real{
+    font-family: var(--font-count-button);
+    font-size: 1.25rem;
+    padding-bottom: 1rem;
+}
+
+.plus-buttons{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.188rem;
+    ;
+} 
+
+.plus-buttons button{
+    padding: 0.5rem;
+    font-family: var(--font-buttons);
+    font-size: 0.75rem;
+}

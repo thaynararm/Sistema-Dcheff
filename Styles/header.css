@@ -1,0 +1,39 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem;
+}
+
+header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--header-color)
+}
+
+header h1{
+    font-size: 1.625rem;
+    font-family: 'Mallanna', sans-serif;
+}
+
+header h2{
+    font-size: 0.938rem;
+    font-family: 'Jaldi', sans-serif;
+    text-shadow: 0.125rem 0.125rem 0.625rem rgba(130 130 130);
+    margin-right: 1.188rem;
+}
+
+header img{
+    width: var(--size-icons);
+    height: var(--size-icons);
+    margin-right: 1.438rem;
+    transition: 0.3s;
+    background-color: transparent;
+    border-radius: 5rem;
+}
+
+header img:hover{
+    box-shadow: 0rem 0rem 2rem var(--menu-color);
+    background-color: var(--backgroud-color-menu);
+}
