@@ -23,7 +23,7 @@
         </div>
 
         <div>
-            <h2>Olá, Thaynara Martins</h2>
+            <h2>Olá, {{ name }}!</h2>
             <img src="{% static '/img/header/settings.png' %}" alt="Imagem de uma Engrenagem">
             <img src="{% static '/img/header/user.png' %}" alt="Imagem de Perfil">
         </div>
@@ -41,7 +41,7 @@
                     <ul class="menu-ul">
                         <li class="menu-li"><h2>Visão Geral</h2></li>
                         <ul class="options-ul">
-                            <li><a class="options-li" href="#">Página Inicial</a></li>
+                            <li><a class="options-li" href="{% url 'index' %}">Página Inicial</a></li>
                         </ul>
                         <li class="menu-li"><h2>Financeiro</h2></li>
                         <ul class="options-ul">
