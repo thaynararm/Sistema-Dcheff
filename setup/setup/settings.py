@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'setup.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mssql',
-        'NAME': 'DCheff',
+        'NAME': 'FinApprise',
         'USER': 'SA',
         'PASSWORD': 'Karla030*',
         'HOST': 'localhost',  
@@ -131,7 +131,8 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'setup/static'),
-    os.path.join(BASE_DIR, 'apps/index/static')
+    os.path.join(BASE_DIR, 'apps/index/static'),
+    os.path.join(BASE_DIR, 'apps/clients/static'),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

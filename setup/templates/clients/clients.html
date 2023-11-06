@@ -1,28 +1,21 @@
+{% extends 'partials/base.html' %}
 {% load static %}
+{% block content %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Criar Cliente</title>
-    <link rel="stylesheet" href="{% static '/styles/style.css' %}">
-</head>
-<body>
-    <h1 class="header">Criar Cliente</h1>
-    <section class="general-form">
-        <form action="{% url 'clients' %}" method="post">
+<main>
+    <section>
+        <div>
+            <h1>Adicionar Cliente</h1>
+        </div>
+        <div>
+            <h2>Informações do Cliente</h2>
+            <img src="{% static '/img/close.png' %}" alt="Imagem de um X">
+        </div>
+        <form method="POST">
             {% csrf_token %}
-            <div>
-                {% for field in form.visible_fields %}
-                <div class="form-items">
-                    <label for="{{ field.id_for_label }}"> {{field.label}} </label>
-                    {{ field }}
-                </div>
-                {% endfor %}
-            </div>
-            <div>
-                <button type="submit">Salvar</button>
-            </div>
+            {{ form.as_p }}
         </form>
     </section>
-</body>
-</html>
+</main>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles/variables.css' %}">
+    <link rel="stylesheet" href="{% static '/styles/index.css' %}">
+    <link rel="stylesheet" href="{% static '/styles/reset.css' %}">
+    <link rel="stylesheet" href="{% static '/styles/header.css' %}">
+    <link rel="stylesheet" href="{% static '/styles/menu.css' %}">
+    <link rel="stylesheet" href="{% static '/styles/balances-section.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web&family=Jaldi&family=Mallanna&family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+    <title>FinApprise</title>
+</head>
+
+<body>
+
+{% include 'partials/header.html' %}
+{% block content %} {% endblock %}
+
+</body>
+
+</html>
