@@ -4,18 +4,50 @@
 
 <main>
     <section>
-        <div>
+        <div class="add-clients">
             <h1>Adicionar Cliente</h1>
+            <button id="previous">
+                <img src="{% static '/img/close.png' %}" alt="Imagem de um X">
+            </button>
+            <script src="{% static '/js/new-client.js' %}"></script>
         </div>
         <div>
-            <h2>Informações do Cliente</h2>
-            <img src="{% static '/img/close.png' %}" alt="Imagem de um X">
-        </div>
-        <form method="POST">
+            <h2 class="information-clients">Informações do Cliente</h2>
+        </div>   
+        <form class="client-form-general" action="{% url 'new_client' %}" method="POST">
             {% csrf_token %}
-            {{ form.as_p }}
+            <div class="client-form">
+                <div class="div-1"> {{ form.company_name.label_tag }} {{ form.company_name }} </div>
+                <div class="div-2"> {{ form.cnpj_cpf.label_tag }} {{ form.cnpj_cpf }} </div>
+            </div>
+            <div class="client-form">
+                <div class="div-3"> {{ form.responsible_name.label_tag }} {{ form.responsible_name }} </div>
+                <div class="div-4"> {{ form.contact.label_tag }} {{ form.contact }} </div>
+                <div class="div-5"> {{ form.city.label_tag }} {{ form.city }} </div>
+            </div>
+            <div class="client-form">
+                <div class="div-1"> {{ form.address.label_tag }} {{ form.address }} </div>
+                <div class="div-2"> {{ form.email.label_tag }} {{ form.email }} </div>
+            </div>
+            <div class="client-form">
+                <div class="div-6"> {{ form.observations.label_tag }} {{ form.observations }} </div>
+            </div>
+            <div>
+                <button class="save-button" type="submit">Salvar</button>
+            </div>
         </form>
     </section>
 </main>
 
 {% endblock %}
+
+<!--<form>
+    {% csrf_token %}
+    <div class="client-form">
+        {% for field in form.visible_fields %}
+            <div class="div-{{ forloop.counter }}">
+                {{ field.label_tag }} {{field}}
+            </div>
+        {% endfor %}
+    </div>
+</form>-->

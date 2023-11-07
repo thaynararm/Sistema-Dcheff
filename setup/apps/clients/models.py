@@ -3,6 +3,7 @@ from django.db import models
 
 class City(models.Model):
     name_city = models.CharField(max_length=100, unique=True)
+    uf_city = models.CharField(max_length=5, default='null')
 
     def __str__(self):
         return self.name_city
