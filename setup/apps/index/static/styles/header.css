@@ -1,7 +1,6 @@
 /* estilizações do cabeçalho */
 
 header{
-    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,6 +12,10 @@ header div{
     justify-content: space-between;
     align-items: center;
     color: var(--header-color)
+}
+
+header a{
+    text-decoration: none;
 }
 
 header h1{
@@ -38,5 +41,51 @@ header img{
 
 header img:hover{
     box-shadow: 0rem 0rem 2rem var(--menu-color);
+    background-color: var(--selected-background);
+}
+
+.img-finapprise{
+    width: auto;
+    height: auto;
+    border-radius: 0rem;
+}
+
+.img-finapprise:hover{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+header button{
+    cursor: pointer;
+}
+
+.dropdown-menu{
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+.dropdown-menu-content{
+    display: none;
+    position: absolute;
+    background-color: var(--background1);
+    left: -5rem;
+    border-radius: 0.5rem;
+}
+
+.dropdown-menu:hover .dropdown-menu-content{
+    display: block;
+}
+
+.dropdown-menu-content a{
+    display: block;
+    font-family: var(--font-istok);
+    text-decoration: none;
+    color: var(--header-color);
+    font-size: var(--options-menu);
+    padding: 1rem 0.5rem;
+}
+
+.dropdown-menu-content a:hover{
     background-color: var(--selected-background);
 }
