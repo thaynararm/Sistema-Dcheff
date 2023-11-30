@@ -4,6 +4,14 @@
         <a href="{% url 'index'%}"><img class="img-finapprise" src="{% static '/img/header/FinApprise.png' %}"></a>
     </div>
 
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
     <div>
         <h2>Olá, {{ name }}!</h2>
         <div class="dropdown-menu">

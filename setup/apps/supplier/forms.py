@@ -3,10 +3,10 @@ from apps.supplier.models import Supplier
 
 class SupplierForms(forms.ModelForm):
     class Meta:
-        model = Supplier
+        model = Supplier    #Especifica quais campos do modelo devem ser incluídos no formulário
 
         #Especifica quais campos do modelo devem ser incluídos no formulário
-        fields = ['company_name', 'cnpj_cpf', 'seller_name', 'contact', 'city', 'address', 'email', 'observations']
+        fields = ['company_name', 'cnpj_cpf', 'seller_name', 'contact','uf', 'city', 'address', 'email', 'observations']
             
         #Define os rótulos dos campos
         labels = { 
@@ -14,6 +14,7 @@ class SupplierForms(forms.ModelForm):
             'cnpj_cpf': 'CNPJ ou CPF',
             'seller_name': 'Nome do Vendedor da Empresa',
             'contact': 'Número de Contato',
+            'uf': 'Estado',
             'city': 'Cidade',
             'address': 'Endereço do Cliente',
             'email': 'Email',
@@ -30,7 +31,12 @@ class SupplierForms(forms.ModelForm):
                 'placeholder': 'Digite o nome do responsável pela empresa',}),
             'contact': forms.TextInput(attrs={
                 'placeholder': '(xx) xxxxx-xxxx',}),
-            'city': forms.Select(attrs={}),
+            'uf': forms.Select(attrs={
+                'class': 'state-field',
+                'id': 'uf'}),
+            'city': forms.Select(attrs={
+                'class': 'city-field',
+                'id': 'city'}),
             'address': forms.TextInput(attrs={
                 'placeholder': 'Digite o endereço da empresa ou do responsável',}),
             'email': forms.TextInput(attrs={
