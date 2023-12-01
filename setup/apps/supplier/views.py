@@ -6,6 +6,7 @@ from apps.index.views import name_hello
 
 
 def new_supplier(request):
+    #Verifica se o usuário está logado
     if not request.user.is_authenticated:
         messages.error(request, 'Usuário não logado')
         return redirect('index')
