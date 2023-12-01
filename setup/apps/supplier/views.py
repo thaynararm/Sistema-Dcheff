@@ -2,15 +2,15 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from apps.supplier.models import Supplier
 from apps.supplier.forms import SupplierForms
-from apps.index.views import name_hello
+from apps.utilities.views import name_hello, check_athentication
 
 
 def new_supplier(request):
-    #Verifica se o usuário está logado
-    if not request.user.is_authenticated:
-        messages.error(request, 'Usuário não logado')
-        return redirect('index')
+    authentication_result = check_athentication(request)
 
+    if authentication_result:
+        return authentication_result
+    
     supplier_form = SupplierForms()
 
     if request.method == 'POST':

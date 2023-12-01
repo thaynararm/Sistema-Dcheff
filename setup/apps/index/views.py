@@ -1,16 +1,12 @@
-from django.shortcuts import render
-from django.contrib.auth import get_user
+from django.shortcuts import render, redirect
+from apps.utilities.views import name_hello, check_athentication
 
 def index(request):
+    authentication_result = check_athentication(request)
+
+    if authentication_result:
+        return authentication_result
+    
     name = name_hello(request)
     return render(request, 'index.html', {'name': name})
 
-def name_hello(request):
-    user = get_user(request)
-    if user:
-        full_name = user.get_full_name().split()
-        first_name = full_name[0]
-        last_name = full_name[-1]
-        name = f'{first_name} {last_name}'
-
-    return name

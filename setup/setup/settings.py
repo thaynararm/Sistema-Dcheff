@@ -40,10 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_htmx',
+    'apps.users.apps.UsersConfig',
     'apps.clients.apps.ClientsConfig',
     'apps.index.apps.IndexConfig',
     'apps.supplier.apps.SupplierConfig',
+    'apps.utilities.apps.UtilitiesConfig',
 ]
 
 MIDDLEWARE = [
@@ -137,6 +138,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'setup/static'),
     os.path.join(BASE_DIR, 'apps/index/static'),
     os.path.join(BASE_DIR, 'apps/clients/static'),
+    os.path.join(BASE_DIR, 'apps/users/static'),
+    os.path.join(BASE_DIR, 'apps/utilities/static'),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

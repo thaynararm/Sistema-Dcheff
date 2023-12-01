@@ -2,14 +2,14 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from apps.clients.models import Clients
 from apps.clients.forms import ClientsForms
-from apps.index.views import name_hello
+from apps.utilities.views import name_hello, check_athentication
 
 
 def new_client(request):
-    #Verifica se o usuário está logado
-    if not request.user.is_authenticated:
-        messages.error(request, 'Usuário não logado')
-        return redirect('index')
+    authentication_result = check_athentication(request)
+
+    if authentication_result:
+        return authentication_result
 
     clients_form = ClientsForms() 
 
