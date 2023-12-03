@@ -2,20 +2,23 @@
 {% load static %}
 {% block content %}
 
+
 <main>
     <section>
-        <div class="fixed-title">
+        <div class="fixed-title-general">
             <h1>Adicionar Cliente</h1>
             <button id="previous">
                 <img src="{% static '/img/close.png' %}" alt="Imagem de um X">
             </button>
             <script src="{% static '/js/new-client.js' %}"></script>
         </div>
-        <div>
-            <h2 class="information-title">Informações do Cliente</h2>
-        </div>   
-
+        
         <form class="form-general" action="{% url 'new_client' %}" method="POST">
+            
+            <div>
+                <h2 class="information-title">Informações do Cliente</h2>
+            </div>   
+            
             {% csrf_token %}
             <div class="form-body">
                 <div class="div-1"> {{ clients_form.company_name.label_tag }} {{ clients_form.company_name }} </div>

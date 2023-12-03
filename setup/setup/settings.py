@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'apps.index.apps.IndexConfig',
     'apps.supplier.apps.SupplierConfig',
     'apps.utilities.apps.UtilitiesConfig',
+    'apps.revenues.apps.RevenuesConfig',
 ]
 
 MIDDLEWARE = [
@@ -140,6 +141,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'apps/clients/static'),
     os.path.join(BASE_DIR, 'apps/users/static'),
     os.path.join(BASE_DIR, 'apps/utilities/static'),
+    os.path.join(BASE_DIR, 'apps/revenues/static'),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -164,3 +166,15 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
     messages.SUCCESS: 'success'
 }
+
+# Separados de números decimais
+DECIMAL_SEPARATOR = ','
+USE_THOUSAND_SEPARATOR = True
+
+# Formato de exibição padrão para datas em modelos de template
+DATE_FORMAT = 'd/m/Y'
+
+# Formatos de entrada de datas para campos de formulário
+DATE_INPUT_FORMATS = [
+    '%d/%m/%Y',  # Formato que você deseja
+]

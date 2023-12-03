@@ -4,17 +4,19 @@
 
 <main>
     <section>
-        <div class="fixed-title">
+        <div class="fixed-title-general">
             <h1>Adicionar Fornecedor</h1>
             <button id="previous">
                 <img src="{% static '/img/close.png' %}" alt="Imagem de um X">
             </button>
             <script src="{% static '/js/new-client.js' %}"></script>
         </div>
-        <div>
-            <h2 class="information-title">Informações do Fornecedor</h2>
-        </div>   
+       
         <form class="form-general" action="{% url 'new_supplier' %}" method="POST">
+            <div>
+                <h2 class="information-title">Informações do Fornecedor</h2>
+            </div>   
+        
             {% csrf_token %}
             <div class="form-body">
                 <div class="div-1"> {{ supplier_form.company_name.label_tag }} {{ supplier_form.company_name }} </div>
@@ -37,7 +39,6 @@
                 <button class="save-button" type="submit">Salvar</button>
             </div>
         </form>
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="{% static '/js/city.js' %}"></script>
     </section>
 </main>

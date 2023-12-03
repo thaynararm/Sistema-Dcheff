@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import get_user
 
-
+#Verifica se o usuário está logado
 def check_athentication(request):
-    #Verifica se o usuário está logado
     if not request.user.is_authenticated:
             return redirect('login')
     return None
 
+#Retorna o primeiro e último nome do usuário -> usado para adicionar no header
 def name_hello(request):
     if request.user.is_authenticated:
         user = get_user(request)

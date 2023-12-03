@@ -1,0 +1,112 @@
+/* Título que fica fixo na página com o botão de fechar */
+
+.fixed-title-new-revenue{
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-fira-sans-condensed);
+    font-size: var(--title-menu);
+    color: var(--green);
+    background-color: var(--transparent-green-10);
+    padding: 0.688rem;
+    border-top: 0.1rem solid var(--green);
+    box-shadow: 0.0rem 0.25rem 0.25rem var(--menu-color);
+    margin-bottom: 1.313rem;
+}
+
+.fixed-title-new-revenue button{
+    cursor: pointer;
+}
+
+.fixed-title-new-revenue button:hover{
+    width: 1.825rem;
+    right: 1.825rem;
+}
+
+.fixed-title-new-revenue img{
+    width: var(--icons-header);
+    right: var(--icons-header);
+    margin-right: 0.375rem;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+
+input[type="date"]{
+    font-size: var(--balances-title);
+    font-family: var(--font-fira-sans-condensed);
+}
+
+/* Corpo do formulário */
+/* o .form-body está no utilities/static/styles/form.css */
+
+.form-body .div-7{
+    width: 80%;
+    padding-right: 3.125rem;
+}
+
+.form-body .div-8{
+    width: 20%;
+}
+
+.form-body .div-8-1{
+    width: 20%;
+    padding-right: 3.125rem
+}
+
+.form-body .div-8-2{
+    flex-direction: row;
+    align-items: center;
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+    font-family: var(--font-fira-sans-condensed);
+    padding: 0.625rem 0rem 0.625rem 0rem;
+    font-size: 1.1rem;
+    width: 8%;
+    padding-right: 3.125rem;
+}
+
+.form-body .div-8-2 input{
+    margin-left: 1rem;
+}
+
+.form-body .div-9{
+    width: 27%;
+    padding-right: 3.125rem;
+}
+
+/* Campos com ícones */
+
+.form-body .div-icon{
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    background-color: var(--selected-background);
+    padding: 0.4rem;
+    border-radius: 0.25rem;
+    outline: none;
+    height: 1.9rem;
+}
+
+.form-body .div-icon input{
+    flex: 1;
+    background-color: transparent;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.form-body .div-icon img{
+    width: auto;
+    height: 100%;
+}
+
+.form-body .div-icon input:focus {
+    border-color: transparent; /* Altera a cor da borda quando o input está focado */
+    /* Outros estilos... */
+}

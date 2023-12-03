@@ -34,12 +34,10 @@ class ClientsForms(forms.ModelForm):
                 'placeholder': '(xx) xxxxx-xxxx',}),
             'uf': forms.Select(attrs={
                 'class': 'state-field',
-                'id': 'uf'
-            }),
+                'id': 'uf'}),
             'city': forms.Select(attrs={
                 'class': 'city-field',
-                'id': 'city'
-            }),
+                'id': 'city'}),
             'address': forms.TextInput(attrs={
                 'placeholder': 'Digite o endereço da empresa ou do responsável',}),
             'email': forms.EmailInput(attrs={
@@ -47,3 +45,4 @@ class ClientsForms(forms.ModelForm):
             'observations': forms.TextInput(attrs={
                 'placeholder': 'Observações',}),
         }
+    
