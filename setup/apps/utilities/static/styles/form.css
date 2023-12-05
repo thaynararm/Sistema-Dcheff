@@ -115,6 +115,73 @@
     padding-bottom: 5rem;
 }
 
+.form-body .div-7{
+    width: 80%;
+    padding-right: 3.125rem;
+}
+
+.form-body .div-8{
+    width: 20%;
+}
+
+.form-body .div-8-1{
+    width: 20%;
+    padding-right: 3.125rem
+}
+
+.form-body .div-8-2{
+    flex-direction: row;
+    align-items: center;
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+    font-family: var(--font-fira-sans-condensed);
+    padding: 0.625rem 0rem 0.625rem 0rem;
+    font-size: 1.1rem;
+    width: 8%;
+    padding-right: 3.125rem;
+}
+
+.form-body .div-8-2 input{
+    margin-left: 1rem;
+}
+
+.form-body .div-9{
+    width: 27%;
+    padding-right: 3.125rem;
+}
+
+
+/* Campos com ícones */
+
+.form-body .div-icon{
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    background-color: var(--selected-background);
+    padding: 0.4rem;
+    border-radius: 0.25rem;
+    outline: none;
+    height: 1.9rem;
+}
+
+.form-body .div-icon input{
+    flex: 1;
+    background-color: transparent;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.form-body .div-icon img{
+    width: auto;
+    height: 100%;
+}
+
+.form-body .div-icon input:focus {
+    border-color: transparent; /* Altera a cor da borda quando o input está focado */
+    /* Outros estilos... */
+}
+
+
 /* Botão de salvar as informações */
 
 .save-button{

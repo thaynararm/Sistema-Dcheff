@@ -40,7 +40,7 @@ class Migration(migrations.Migration):
                 ('receipt_status', models.BooleanField(default=False)),
                 ('comments', models.TextField(blank=True, null=True)),
                 ('source', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='clients.clients')),
-                ('subcategory', models.ForeignKey(default='Receita a Identificar', on_delete=django.db.models.deletion.SET_DEFAULT, to='revenues.recipesubcategories')),
+                ('subcategory', models.ForeignKey(default=1, on_delete=django.db.models.deletion.SET_DEFAULT, to='revenues.recipesubcategories')),
             ],
         ),
     ]

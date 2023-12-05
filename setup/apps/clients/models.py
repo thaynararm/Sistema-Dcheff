@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
    
 class Clients(models.Model):
@@ -11,6 +12,7 @@ class Clients(models.Model):
     address = models.CharField(max_length=100, blank=True, null=True)
     email = models.EmailField(blank=True, null=True)
     observations = models.TextField(blank=True, null=True)
+    autor = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
 
     def __str__(self):
         return self.company_name

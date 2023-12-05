@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'apps.supplier.apps.SupplierConfig',
     'apps.utilities.apps.UtilitiesConfig',
     'apps.revenues.apps.RevenuesConfig',
+    'apps.expenses.apps.ExpensesConfig',
 ]
 
 MIDDLEWARE = [
@@ -142,6 +143,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'apps/users/static'),
     os.path.join(BASE_DIR, 'apps/utilities/static'),
     os.path.join(BASE_DIR, 'apps/revenues/static'),
+    os.path.join(BASE_DIR, 'apps/expenses/static'),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -167,7 +169,7 @@ MESSAGE_TAGS = {
     messages.SUCCESS: 'success'
 }
 
-# Separados de números decimais
+# Separador de números decimais
 DECIMAL_SEPARATOR = ','
 USE_THOUSAND_SEPARATOR = True
 

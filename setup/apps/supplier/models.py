@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Supplier(models.Model):
     id = models.AutoField(db_column='ID', primary_key=True)  # Field name made lowercase.
@@ -11,6 +12,8 @@ class Supplier(models.Model):
     address = models.CharField(max_length=100, blank=True, null=True)
     email = models.EmailField(blank=True, null=True)
     observations = models.TextField(blank=True, null=True)
+    autor = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+
 
     def __str__(self):
         return self.company_name

@@ -1,13 +1,13 @@
 from typing import Any
 from django import forms
-from apps.revenues.models import Revenues
+from apps.expenses.models import Expenses
 from datetime import datetime
 
 
-class RevenuesForms(forms.ModelForm):
+class ExpensesForms(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
-        super(RevenuesForms, self).__init__(*args, **kwargs)
+        super(ExpensesForms, self).__init__(*args, **kwargs)
         # Defina a data atual como valor inicial para o campo date_of_competence
         self.fields['date_of_competence'].initial = datetime.today().strftime('%Y-%m-%d')
         self.fields['delivery_date'].initial = datetime.today().strftime('%Y-%m-%d')
@@ -15,9 +15,8 @@ class RevenuesForms(forms.ModelForm):
         self.fields['value'].widget.is_localized = True
 
     
-
     class Meta:
-        model = Revenues        #Especifica quais campos do modelo devem ser incluídos no formulário
+        model = Expenses        #Especifica quais campos do modelo devem ser incluídos no formulário
 
         #Especifica quais campos do modelo devem ser incluídos no formulário        
         fields = ['description', 'date_of_competence', 'subcategory', 'source', 'value', 'delivery_date', 'receipt_account', 'receipt_status', 'comments']
@@ -29,16 +28,16 @@ class RevenuesForms(forms.ModelForm):
             'subcategory': 'Categoria',
             'source': 'Origem',
             'value': 'Valor',
-            'delivery_date': 'Data de Recebimento',
-            'receipt_account': 'Conta de Recebimento',
-            'receipt_status': 'Recebido',
+            'delivery_date': 'Data de Pagamento',
+            'receipt_account': 'Conta de Pagamento',
+            'receipt_status': 'Pago',
             'comments': 'Observações',
             }
 
         #Define como cada campo deve ser exibido
         widgets = {
             'description': forms.TextInput(attrs={
-                'placeholder': 'Descrição da Receita',}),
+                'placeholder': 'Descrição da Despesa',}),
             'date_of_competence': forms.TextInput(
                 attrs={
                 'class': 'date'}),
@@ -64,5 +63,3 @@ class RevenuesForms(forms.ModelForm):
                 'placeholder': 'Observações',}),
             }
         
-        
-    
