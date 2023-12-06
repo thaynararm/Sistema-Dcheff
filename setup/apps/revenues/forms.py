@@ -1,4 +1,3 @@
-from typing import Any
 from django import forms
 from apps.revenues.models import Revenues
 from datetime import datetime

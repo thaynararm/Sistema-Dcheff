@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'apps.utilities.apps.UtilitiesConfig',
     'apps.revenues.apps.RevenuesConfig',
     'apps.expenses.apps.ExpensesConfig',
+    'apps.products.apps.ProductsConfig',
 ]
 
 MIDDLEWARE = [
@@ -144,6 +145,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'apps/utilities/static'),
     os.path.join(BASE_DIR, 'apps/revenues/static'),
     os.path.join(BASE_DIR, 'apps/expenses/static'),
+    os.path.join(BASE_DIR, 'apps/products/static'),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
