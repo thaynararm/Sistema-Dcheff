@@ -48,7 +48,7 @@ class ExpensesForms(forms.ModelForm):
                 'class': 'combobox'}),
             'value': forms.TextInput(attrs={
                 'placeholder': '0,00',
-                'id':'value',
+                'class': 'value',
                 'step':'0.01',
                 'localize': 'True'}),
             'delivery_date': forms.TextInput(

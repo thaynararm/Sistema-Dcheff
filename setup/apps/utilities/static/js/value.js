@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    $('#value').mask('000.000.000.000.000,00', {reverse: true});
-    $('#value').on('input', function(e){
+    $('.value').mask('000.000.000.000.000,00', {reverse: true});
+    $('.value').on('input', function(e){
         var value = $(this).val().replace(/\D/g, '');
 
         if(value.length > 2){

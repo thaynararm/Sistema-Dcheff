@@ -43,6 +43,14 @@
     border-bottom: 0.1rem solid var(--black);
 }
 
+.information-subtitle{
+    font-family: var(--font-fira-sans-condensed);
+    font-size: var(--title-menu);
+    margin: 1.125rem 0rem 1.125rem 0rem ;
+    padding: 5.188rem 0rem 1.188rem 0rem;
+    border-bottom: 0.1rem solid var(--black);
+}
+
 /* Corpo do formulário */
 
 .form-general{
@@ -103,8 +111,24 @@
     padding-right: 3.125rem;
 }
 
-.form-body .div-5{
+.form-body .div-4-1{
     width: 15%;
+}
+
+.form-body .div-5{
+    flex-direction: row;
+    align-items: center;
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+    font-family: var(--font-fira-sans-condensed);
+    padding: 0.625rem 0rem 0.625rem 0rem;
+    font-size: 1.1rem;
+    width: 8%;
+    padding-right: 3.125rem;
+}
+
+.form-body .div-5 input{
+    margin-left: 1rem;
 }
 
 .form-body .div-6{
@@ -127,22 +151,6 @@
 .form-body .div-8-1{
     width: 20%;
     padding-right: 3.125rem
-}
-
-.form-body .div-8-2{
-    flex-direction: row;
-    align-items: center;
-    padding-top: 2.5rem;
-    margin-top: 2rem;
-    font-family: var(--font-fira-sans-condensed);
-    padding: 0.625rem 0rem 0.625rem 0rem;
-    font-size: 1.1rem;
-    width: 8%;
-    padding-right: 3.125rem;
-}
-
-.form-body .div-8-2 input{
-    margin-left: 1rem;
 }
 
 .form-body .div-9{

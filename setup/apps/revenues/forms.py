@@ -1,13 +1,13 @@
 from django import forms
-from apps.revenues.models import Revenues
 from datetime import datetime
+from apps.revenues.models import Revenues
+
 
 
 class RevenuesForms(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(RevenuesForms, self).__init__(*args, **kwargs)
-        # Defina a data atual como valor inicial para o campo date_of_competence
         self.fields['date_of_competence'].initial = datetime.today().strftime('%Y-%m-%d')
         self.fields['delivery_date'].initial = datetime.today().strftime('%Y-%m-%d')
         self.fields['value'].localize = True
@@ -48,7 +48,7 @@ class RevenuesForms(forms.ModelForm):
                 'class': 'combobox'}),
             'value': forms.TextInput(attrs={
                 'placeholder': '0,00',
-                'id':'value',
+                'class': 'value',
                 'step':'0.01',
                 'localize': 'True'}),
             'delivery_date': forms.TextInput(

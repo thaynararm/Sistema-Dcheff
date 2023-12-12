@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime
 from django.contrib.auth.models import User
+from apps.supplier.models import Supplier
 
 
 class RecipeCategoriesProducts(models.Model):
@@ -44,3 +45,18 @@ class Products(models.Model):
 
     def __str__(self):
         return self.product_name
+
+
+class EntryProductsForms(models.Model):
+    product_name = models.ForeignKey(Products, on_delete=models.SET_DEFAULT, default=1)
+    unit_of_measurement = models.ForeignKey(UnitOfMeasurement, on_delete=models.SET_DEFAULT, default=1)
+    quantity = models.CharField(max_length=100, blank=False, null=False)
+    unitary_value = models.DecimalField(max_digits=15, decimal_places=2, blank=False, null=False)
+    total_value = models.DecimalField(max_digits=15, decimal_places=2, blank=False, null=False)
+    entry_date = models.DateField(default=datetime.now, blank=False, null=False)
+    supplier = models.ForeignKey(Supplier, on_delete=models.SET_DEFAULT, default=1)
+    invoice_number = models.CharField(max_length=100)
+    comments = models.TextField(blank=True, null=True)
+    autor = models.ForeignKey(User, on_delete=models.CASCADE, default=1, related_name='products_entry_autor')
+
+
