@@ -18,11 +18,11 @@ class ListingCategoriesProducts(admin.ModelAdmin):
     list_display_links = ('category_name',)
 
 
-class ListingCategoriesProducts(admin.ModelAdmin):
-    list_display = ('category_name', 'autor')
-    list_display_links = ('category_name',)
+class ListingUnitOfMeasurement(admin.ModelAdmin):
+    list_display = ('unit_of_measurement', 'autor')
+    list_display_links = ('unit_of_measurement',)
 
 admin.site.register(Products, ListingProducts)
 admin.site.register(RecipeSubcategoriesProducts, ListingSubcategoriesProducts)
 admin.site.register(RecipeCategoriesProducts, ListingCategoriesProducts)
-
+admin.site.register(UnitOfMeasurement, ListingUnitOfMeasurement)

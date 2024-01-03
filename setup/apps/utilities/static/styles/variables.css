@@ -41,15 +41,15 @@
     /* tamanhos */
 
         /* de textos */
-        --options-menu: 0.825em; /* opções do menu de cada subseção */
+        --options-menu: 0.9em; /* opções do menu de cada subseção */
         --hello-and-menu-name: 0.938em; /* subsessões dos menus e "olá" do cabeçalho */
         --brand-name: 1.625em; /* nome FinApprise */
         --title-menu: 1.265em; /* nome do menu e título das contas financeiras */
-        --account-selection: 0.688em; /* texto da conta escolhida */
-        --balances-title: 0.813em; /* textos dos saldos e das contas financeiras */
+        --account-selection: 0.8em; /* texto da conta escolhida */
+        --balances-title: 0.95em; /* textos dos saldos e das contas financeiras */
         --value: 1.5em; /* valor em dinheiro dos saldos */
         --real: 1.25em; /* texto do R$ do saldo */
-        --text-buttons-plus: 0.75em; /* texto dos botões de adicionar receitas, despesas e transferências */
+        --text-buttons-plus: 0.9em; /* texto dos botões de adicionar receitas, despesas e transferências */
 
 
         /* de imagens */

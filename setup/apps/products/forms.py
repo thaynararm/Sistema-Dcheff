@@ -47,7 +47,7 @@ class ProductsForms(forms.ModelForm):
                 'placeholder': 'Quantidade',}),
             'sale_value': forms.TextInput(attrs={
                 'placeholder': '0,00',
-                'id': 'value',
+                'class': 'value',
                 'step':'0.01',
                 'localize': 'True'}),
             'location_in_stock': forms.TextInput(attrs={

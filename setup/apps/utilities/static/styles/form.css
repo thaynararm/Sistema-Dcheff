@@ -47,7 +47,7 @@
     font-family: var(--font-fira-sans-condensed);
     font-size: var(--title-menu);
     margin: 1.125rem 0rem 1.125rem 0rem ;
-    padding: 5.188rem 0rem 1.188rem 0rem;
+    padding: 1.188rem 0rem 1.188rem 0rem;
     border-bottom: 0.1rem solid var(--black);
 }
 
@@ -72,6 +72,14 @@
     border-color: transparent;
     border-width: 0.05rem;
     font-family: var(--font-fira-sans-condensed);
+}
+
+.new-product{
+    border-bottom: 0.1rem solid var(--black);
+}
+
+.new-item{
+    padding: 3rem 0rem;
 }
 
 .form-body{

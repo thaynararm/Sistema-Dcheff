@@ -20,16 +20,11 @@ def product_registration(request):
 
         #Verifica se o formulário é valido e salva no banco de dados
         if product_registration_form.is_valid():
-                try:
-                    product_registration_form.save()
-                    messages.success(request, 'Novo produto registrado!')
-                    return redirect('index')
-                except:
-                    messages.error(request, 'Ocorreu um erro ao cadastrar o produto!')
-
+            product_registration_form.save()
+            messages.success(request, 'Novo produto registrado!')
+            return redirect('index')
         else:
              messages.error(request, 'Ocorreu um erro ao cadastrar o produto!')
-             print(product_registration_form.errors)
                          
     name = name_hello(request)
     return render(request, 'products/product_registration.html', {'product_registration_form': product_registration_form, 'name': name})
