@@ -1,3 +1,12 @@
 $(document).ready(function() {
-    $('#uf').select2();
+    $('#subcategory').select2();
+});
+
+$(document).ready(function() {
+    $('#source').select2();
+});
+
+
+$(document).ready(function() {
+    $('#product').select2();
 });

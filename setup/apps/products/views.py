@@ -24,7 +24,9 @@ def product_registration(request):
             messages.success(request, 'Novo produto registrado!')
             return redirect('index')
         else:
+             print(product_registration_form.errors)
              messages.error(request, 'Ocorreu um erro ao cadastrar o produto!')
+             
                          
     name = name_hello(request)
     return render(request, 'products/product_registration.html', {'product_registration_form': product_registration_form, 'name': name})
@@ -45,17 +47,15 @@ def product_entry(request):
         products_entry_form = ProductsEntryForms(request.POST)
 
         #Verifica se o formulário é valido e salva no banco de dados
-        if products_entry_form.is_valid():
-                try:
-                    products_entry_form.save()
-                    messages.success(request, 'Entrada de produto registrado!')
-                    return redirect('index')
-                except:
-                    messages.error(request, 'Ocorreu um erro ao cadastrar a entrada!')
-
+        if products_entry_form.is_valid():    
+            products_entry_form.save()
+            messages.success(request, 'Entrada de produto registrado!')
+            return redirect('index')
+                
         else:
-             messages.error(request, 'Ocorreu um erro ao cadastrar a entrada!')
              print(products_entry_form.errors)
+             messages.error(request, 'Ocorreu um erro ao cadastrar a entrada!')
+             
     
     name = name_hello(request)
     return render(request, 'products/product_entry.html', {'products_entry_form': products_entry_form,'name': name})

@@ -93,7 +93,9 @@ class ProductsEntryForms(forms.ModelForm):
 
         #Define como cada campo deve ser exibido
         widgets = {
-            'product_name': forms.Select(attrs={}),
+            'product_name': forms.Select(attrs={
+                'id': 'product',
+            }),
             'unit_of_measurement': forms.Select(attrs={
                 'id': 'source',
                 'class': 'combobox'}),
