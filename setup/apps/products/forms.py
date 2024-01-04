@@ -39,7 +39,8 @@ class ProductsForms(forms.ModelForm):
             'product_code': forms.TextInput(attrs={
                 'placeholder': 'Código do Produto',}),            
             'subcategory': forms.Select(attrs={
-                'id': 'subcategory'}),
+                'id': 'subcategory',
+                'class': 'selector-search',}),
             'unit_of_measurement': forms.Select(attrs={
                 'id': 'source',
                 'class': 'combobox'}),

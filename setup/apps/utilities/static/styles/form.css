@@ -33,7 +33,7 @@
 }
 
 
-/* Título que fica no formulário informanndo sobre o que se trata o formulário */
+/* Título que fica no formulário informando sobre o que se trata o formulário */
 
 .information-title{
     font-family: var(--font-fira-sans-condensed);
@@ -66,12 +66,13 @@
 
 .form-general input, select{
     font-size: var(--balances-title);
+    font-family: var(--font-fira-sans-condensed);
     padding: 0.625rem 0rem 0.625rem 0.563rem;
     background-color: var(--selected-background);
     border-radius: 0.25rem;
     border-color: transparent;
     border-width: 0.05rem;
-    font-family: var(--font-fira-sans-condensed);
+    
 }
 
 .new-product{
