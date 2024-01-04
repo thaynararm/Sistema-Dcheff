@@ -67,7 +67,8 @@
 .form-general input, select{
     font-size: var(--balances-title);
     font-family: var(--font-fira-sans-condensed);
-    padding: 0.625rem 0rem 0.625rem 0.563rem;
+    height: 2.5rem;
+    padding-left: 0.3rem;
     background-color: var(--selected-background);
     border-radius: 0.25rem;
     border-color: transparent;

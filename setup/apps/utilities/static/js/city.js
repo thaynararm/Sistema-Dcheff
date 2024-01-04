@@ -1,41 +1,48 @@
-const urlUf = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados'
-const city = document.getElementById("city")
-const uf = document.getElementById("uf")
+const urlUf = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados';
+const city = $('#city');
+const uf = $('#uf');
 
-uf.addEventListener('change', async function(){
+// Inicialize o Select2 para os elementos uf e city
+uf.select2();
+city.select2();
+
+uf.on('change', async function() {
     let urlCities;
-    if(uf.value == 'DF'){
-        urlCities = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/'+uf.value+'/subdistritos';
+    if(uf.val() == 'DF') {
+    urlCities = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/' + uf.val() + '/subdistritos';
     } else {
-        urlCities = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/'+uf.value+'/municipios';
+    urlCities = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/' + uf.val() + '/municipios';
     }
+
     const request = await fetch(urlCities);
     const response = await request.json();
 
-    response.sort((a, b) => a.nome.localeCompare(b.nome))
+    response.sort((a, b) => a.nome.localeCompare(b.nome));
 
-    let options = ''
+    let options = '<option>Selecione a cidade</option>'; // Adicione uma opção vazia para desmarcar a cidade
 
-    response.forEach(function(city){
-        options += '<option>' + city.nome + '</option>'
-    })
-    city.innerHTML = options
-})
+    response.forEach(function(city) {
+    options += '<option value="' + city.nome + '">' + city.nome + '</option>';
+    });
 
+    city.html(options);
+    // Atualize o Select2 após alterar as opções
+    city.trigger('change');
+});
 
-window.addEventListener('load', async ()=>{
+$(document).ready(async function() {
     const request = await fetch(urlUf);
     const response = await request.json();
 
     response.sort((a, b) => a.nome.localeCompare(b.nome));
 
-    const options = document.createElement('optgroup');
+    let options = '<option>Selecione o estado</option>'; // Adicione uma opção vazia para desmarcar o estado
 
-    options.innerHTML += '<option disabled selected value>Selecione o Estado</option>';
+    response.forEach(function(uf) {
+    options += '<option value="' + uf.sigla + '">' + uf.sigla + '</option>';
+    });
 
-    response.forEach(function(uf){
-        options.innerHTML += '<option>' + uf.sigla + '</option>'
-    })
-
-    uf.append(options)
-})
+    uf.html(options);
+    // Atualize o Select2 após alterar as opções
+    uf.trigger('change');
+});
