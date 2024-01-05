@@ -100,17 +100,21 @@ class ProductsEntryForms(forms.ModelForm):
                 'id': 'source',
                 'class': 'combobox'}),
             'quantity': forms.TextInput(attrs={
-                'placeholder': 'Quantidade',}),
+                'placeholder': 'Quantidade',
+                'class': 'quantity',
+                'id': 'quantity',}),
             'unitary_value': forms.TextInput(attrs={
                 'placeholder': '0,00',
                 'class': 'value',
                 'step':'0.01',
-                'localize': 'True'}),
+                'localize': 'True',
+                'id' : 'unitary_value'}),
             'total_value': forms.TextInput(attrs={
                 'placeholder': '0,00',
                 'class': 'value',
                 'step':'0.01',
-                'localize': 'True'}),    
+                'localize': 'True',
+                'id': 'total_value',}),    
             'entry_date': forms.TextInput(
                 attrs={
                 'class': 'date'}),        
